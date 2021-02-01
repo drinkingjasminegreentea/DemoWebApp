@@ -1,0 +1,22 @@
+﻿@using DemoWebApp.Models
+@model HomeIndexViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <p>
+        @Model.UserName
+    </p>
+    <h1 class="display-4">Weather</h1>
+
+    @foreach (WeatherForecast forecast in Model.Forecasts)
+    {
+        <div class="row">
+            <div class="col-12">
+                @forecast.Summary
+            </div>
+        </div>
+    }
+</div>
